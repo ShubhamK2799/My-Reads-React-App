@@ -8,7 +8,6 @@ class BookSelfContainer extends Component{
         super(props)
         this.state={
             books:[]
-            // shelf:''
         }
         // in order to access this.state in the function
         this.updateShelf=this.updateShelf.bind(this)
@@ -20,6 +19,7 @@ class BookSelfContainer extends Component{
         BooksAPI.getAll()
         .then((allBooks)=>{
             this.setState({books:allBooks});
+            console.log(this.state.books)
         })
     }
 
